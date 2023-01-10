@@ -9,8 +9,10 @@ namespace DemoOpenCart
 {
     public class RegisterTest : AutomationWrapper
     {
-        
-       [Test, TestCaseSource(typeof(DataSource), nameof(DataSource.ValidRegisterData))]
+
+        //[Test, TestCaseSource(typeof(DataSource), nameof(DataSource.ValidRegisterData))]
+        [Test, TestCaseSource(typeof(DataSource), nameof(DataSource.ExcelValidData))]
+
         public void ValidateRegisterTest(string firstName, string lastName, string Email, string password)
         {
             
@@ -66,13 +68,7 @@ namespace DemoOpenCart
             driver.FindElement(By.XPath("//input[@placeholder= 'E-Mail']")).SendKeys(Email);
             driver.FindElement(By.Id("input-password")).SendKeys(password);
 
-            Thread.Sleep(1000);
-            Actions actions = new Actions(driver);
-            actions.ScrollToElement(driver.FindElement(By.XPath("//input[@type='radio']"))).Perform();
-
-            //driver.FindElement(By.XPath("//input[@type='checkbox']")).Click();
-
-            //driver.FindElement(By.XPath("//button[text()= 'Continue'")).Click();
+            
 
             driver.ExecuteJavaScript("document.querySelector('[type=\"checkbox\"]').click();\r\n\r\n");
             driver.ExecuteJavaScript("document.querySelector('[type=\"submit\"]').click();");

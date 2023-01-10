@@ -29,7 +29,7 @@ namespace DemoOpenCart.Base
         public void AfterMethod()
         {
             //browser close
-           // driver.Quit();
+            driver.Quit();
 
         }
     }

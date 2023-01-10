@@ -41,6 +41,29 @@ namespace DemoOpenCart.Utilities
             return alldata;
         }
 
+        public static object[] ValidLoginData1()
+        {
+            string[] data = new string[2];
+            data[0] = "aara@123.com";
+            data[1] = "aarya@123";
+
+            string[] data1 = new string[2];
+            data1[0] = "devag@123.com";
+            data1[1] = "Deva@123";
+
+            string[] data2 = new string[2];
+            data2[0] = "dhanuk@123.com";
+            data2[1] = "Dhanu@123";
+
+            object[] alldata = new object[3];
+            alldata[0] = data;
+            alldata[1] = data1;
+            alldata[2] = data2;
+            return alldata;
+        }
+
+        
+
         public static object[] InvalidRegisterData()
         {
             string[] data = new string[4];
@@ -73,6 +96,33 @@ namespace DemoOpenCart.Utilities
             return alldata;
 
             
+        }
+
+        public static object[] InvalidLoginData1()
+        {
+            string[] data = new string[2];
+            data[0] = "diya@123.com";
+            data[1] = "diya@123";
+
+            string[] data1 = new string[2];
+            data1[0] = "devg@123.com";
+            data1[1] = "Dev@123";
+
+            string[] data2 = new string[2];
+            data2[0] = "komal@123.com";
+            data2[1] = "komal@123";
+
+            object[] alldata = new object[3];
+            alldata[0] = data;
+            alldata[1] = data1;
+            alldata[2] = data2;
+            return alldata;
+        }
+
+        public static object[] ExcelValidData()
+        {
+            object[] data = ExcelUtils.GetSheetIntoObjectArray(@"C:\Users\artig\Desktop\CSharp\AutomationSeleniumProject1\DemoOpenCart\Test Data\DemoOpenCart.xlsx", "ValidateRegisterTest");
+            return data;
         }
     }
 }

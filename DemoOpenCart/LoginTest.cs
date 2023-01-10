@@ -11,6 +11,7 @@ namespace DemoOpenCart
 {
     public class LoginTest : AutomationWrapper
     {
+        
         [Test, TestCaseSource(typeof(DataSource), nameof(DataSource.ValidLoginData1))]
         public void ValidLoginTest(string username, string password)
         {

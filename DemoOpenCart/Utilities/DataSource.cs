@@ -101,16 +101,16 @@ namespace DemoOpenCart.Utilities
         public static object[] InvalidLoginData1()
         {
             string[] data = new string[2];
-            data[0] = "diya@123.com";
-            data[1] = "diya@123";
+            data[0] = "diya1@123.com";
+            data[1] = "diy_a@123";
 
             string[] data1 = new string[2];
-            data1[0] = "devg@123.com";
+            data1[0] = "dev1g@123.com";
             data1[1] = "Dev@123";
 
             string[] data2 = new string[2];
             data2[0] = "komal@123.com";
-            data2[1] = "komal@123";
+            data2[1] = "kom1al@123";
 
             object[] alldata = new object[3];
             alldata[0] = data;
@@ -122,6 +122,9 @@ namespace DemoOpenCart.Utilities
         public static object[] ExcelValidData()
         {
             object[] data = ExcelUtils.GetSheetIntoObjectArray(@"C:\Users\artig\Desktop\CSharp\AutomationSeleniumProject1\DemoOpenCart\Test Data\DemoOpenCart.xlsx", "ValidateRegisterTest");
+
+            object[] data1 = ExcelUtils.GetSheetIntoObjectArray(@"C:\Users\artig\Desktop\CSharp\AutomationSeleniumProject1\DemoOpenCart\Test Data\DemoOpenCart.xlsx", "ValidLoginTest");
+            
             return data;
         }
     }

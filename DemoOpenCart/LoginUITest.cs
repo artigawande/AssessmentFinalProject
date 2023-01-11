@@ -31,6 +31,10 @@ namespace DemoOpenCart
         [Test]
         public void ValidatePlaceholderTest()
         {
+            Thread.Sleep(5000);
+
+
+
             string actualfirstnamePlaceholder = driver.FindElement(By.XPath("//input[@placeholder= 'First Name']")).GetAttribute("placeholder");
             string actuallastnamePlaceholder = driver.FindElement(By.XPath("//input[@placeholder= 'Last Name']")).GetAttribute("placeholder");
 

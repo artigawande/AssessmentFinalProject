@@ -119,6 +119,20 @@ namespace DemoOpenCart.Utilities
             return alldata;
         }
 
+        public static object[] ForgotTestData()
+        {
+            string[] data = new string[1];
+            data[0] = "aarya@123.com";
+
+            string[] data1 = new string[1];
+            data1[0] = "dhanuk@123.com";
+
+            object[] obj= new object[2];
+            obj[0] = data;
+            obj[1] = data1;
+            return obj;
+        }
+
         public static object[] ExcelValidData()
         {
             object[] data = ExcelUtils.GetSheetIntoObjectArray(@"C:\Users\artig\Desktop\CSharp\AutomationSeleniumProject1\DemoOpenCart\Test Data\DemoOpenCart.xlsx", "ValidateRegisterTest");

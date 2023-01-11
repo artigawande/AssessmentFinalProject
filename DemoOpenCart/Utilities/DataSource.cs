@@ -43,17 +43,23 @@ namespace DemoOpenCart.Utilities
 
         public static object[] ValidLoginData1()
         {
-            string[] data = new string[2];
+            string[] data = new string[4];
             data[0] = "aara@123.com";
             data[1] = "aarya@123";
+            data[2] = "Returning Customer";
+            data[3] = "I am a returning customer";
 
-            string[] data1 = new string[2];
+            string[] data1 = new string[4];
             data1[0] = "devag@123.com";
             data1[1] = "Deva@123";
+            data1[2] = "Returning Customer";
+            data1[3] = "I am a returning customer";
 
-            string[] data2 = new string[2];
+            string[] data2 = new string[4];
             data2[0] = "dhanuk@123.com";
             data2[1] = "Dhanu@123";
+            data2[2] = "Returning Customer";
+            data2[3] = "I am a returning customer";
 
             object[] alldata = new object[3];
             alldata[0] = data;
@@ -121,11 +127,13 @@ namespace DemoOpenCart.Utilities
 
         public static object[] ForgotTestData()
         {
-            string[] data = new string[1];
+            string[] data = new string[2];
             data[0] = "aarya@123.com";
+            data[1] = "Forgot Your Password?";
 
-            string[] data1 = new string[1];
+            string[] data1 = new string[2];
             data1[0] = "dhanuk@123.com";
+            data1[1] = "Forgot Your Password?";
 
             object[] obj= new object[2];
             obj[0] = data;

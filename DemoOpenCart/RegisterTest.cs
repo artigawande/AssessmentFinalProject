@@ -33,7 +33,7 @@ namespace DemoOpenCart
 
             driver.ExecuteJavaScript("document.querySelector('[type=\"checkbox\"]').click();\r\n\r\n");
             driver.ExecuteJavaScript("document.querySelector('[type=\"submit\"]').click();");
-            
+
             
             
             //Actions act = new Actions(driver);
@@ -75,7 +75,7 @@ namespace DemoOpenCart
             driver.ExecuteJavaScript("document.querySelector('[type=\"checkbox\"]').click();\r\n\r\n");
             driver.ExecuteJavaScript("document.querySelector('[type=\"submit\"]').click();");
 
-
+            
 
         }
 

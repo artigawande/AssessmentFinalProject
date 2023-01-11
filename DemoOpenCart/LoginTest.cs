@@ -14,7 +14,7 @@ namespace DemoOpenCart
     {
         
         [Test, TestCaseSource(typeof(DataSource), nameof(DataSource.ValidLoginData1))]
-        public void ValidLoginTest(string username, string password)
+        public void ValidLoginTest(string username, string password, string LoginTitle, string LoginSubTitle)
         {
             driver.FindElement(By.XPath("//span[text()='My Account']")).Click();
             driver.FindElement(By.XPath("//a[text()='Login']")).Click();
@@ -27,6 +27,19 @@ namespace DemoOpenCart
             loginpage.EnterUserName(username);
             loginpage.EnterPassword(password);
             loginpage.ClickOnLogin();
+
+            string Loginpage1 = driver.FindElement(By.XPath("//h2[text()='Returning Customer']")).Text;
+            Loginpage1.ToUpper();
+
+            Assert.That(Loginpage1, Is.EqualTo(LoginTitle));
+            Console.WriteLine(Loginpage1);
+
+            string Loginpage2 = driver.FindElement(By.XPath("//strong[text()='I am a returning customer']")).Text;
+            Loginpage1.ToUpper();
+
+            Assert.That(Loginpage2, Is.EqualTo(LoginSubTitle));
+            Console.WriteLine(Loginpage2);
+
 
         }
 
@@ -44,6 +57,8 @@ namespace DemoOpenCart
             invalid.EnterUserName(username);
             invalid.EnterPassword(password);
             invalid.ClickOnLogin();
+
+            
 
         }
     }

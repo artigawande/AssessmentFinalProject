@@ -14,7 +14,7 @@ namespace DemoOpenCart
     {
         [Test, TestCaseSource(typeof(DataSource), nameof(DataSource.ForgotTestData))]
 
-        public void ForgotPasswordTest(string email)
+        public void ForgotPasswordTest(string email, string titlemessage)
         {
             driver.FindElement(By.XPath("//span[text()='My Account']")).Click();
             driver.FindElement(By.XPath("//a[text()='Login']")).Click();
@@ -28,6 +28,12 @@ namespace DemoOpenCart
             forgot.ClickOnForgotPassword();
             forgot.EnterEmailAddress(email);
             forgot.ClickONContinue();
+
+            string title = driver.FindElement(By.XPath("//h1[text()='Forgot Your Password?']")).Text;
+            title.ToUpper();
+
+            Assert.That(title, Is.EqualTo(titlemessage));
+            Console.WriteLine(title);
 
 
         }
